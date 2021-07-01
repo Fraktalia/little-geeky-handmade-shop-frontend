@@ -1,5 +1,16 @@
 <div class="component-wrapper">
-  <img src="assets/images/picture_3.png" class="slide-picture">
+<!--  <img src="assets/images/picture_3.png" class="slide-picture">-->
+  <carousel
+    [images]="images"
+    [objectFit]="'cover'"
+    [cellWidth]="'100%'"
+    [height]="500"
+    [autoplay]="true"
+    [loop]="true"
+    [autoplayInterval]="2000"
+    [dots]="true"
+    >
+  </carousel>
   <ul class = "products">
     <li *ngFor="let product of products">
       <p>

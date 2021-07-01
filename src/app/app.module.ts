@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {CommonModule} from "@angular/common";
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import {IvyCarouselModule} from "angular-responsive-carousel";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
