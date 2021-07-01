@@ -10,6 +10,8 @@ import {ProductService} from "../product.service";
 export class FrontPageComponent implements OnInit {
   products: Product[] = [];
   images = [
+    {path: 'assets/images/picture_1.png'},
+    {path: 'assets/images/picture_2.png'},
     {path: 'assets/images/picture_3.png'},
     {path: 'assets/images/picture_4.png'}
   ]
