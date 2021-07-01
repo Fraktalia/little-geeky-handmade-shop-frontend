@@ -1,0 +1,25 @@
+:host {
+  margin-top: 1.2em;
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+
+nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+a{
+  font-family: cursive;
+  color: slategrey;
+  text-decoration: none;
+}
+
+a:hover{
+  color: black;
+}
+
+.active-link{
+  color: black;
+}

@@ -1,0 +1,67 @@
+
+@use '~@angular/material/theming' as mat;
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$my-theme-primary: mat-palette();
+  50: #fcfce2,
+  100: #f7f8b7,
+  200: #f1f388,
+  300: #ebee58,
+  400: #e7eb34,
+  500: #e3e710,
+  600: #e0e40e,
+  700: #dce00c,
+  800: #d8dd09,
+  900: #d0d705,
+  A100: #ffffff,
+  A200: #fdffcc,
+  A400: #fcff99,
+  A700: #fbff80,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,)
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$little-geeky-handmade-primary: mat.define-palette($my-theme-primary, 300, 400);
+$little-geeky-handmade-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$little-geeky-handmade-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$little-geeky-handmade-theme: mat.define-light-theme((
+  color: (
+    primary: $little-geeky-handmade-primary,
+    accent: $little-geeky-handmade-accent,
+    warn: $little-geeky-handmade-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($little-geeky-handmade-theme);
+

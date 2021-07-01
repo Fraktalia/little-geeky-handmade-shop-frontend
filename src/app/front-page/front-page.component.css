@@ -1,0 +1,10 @@
+.component-wrapper{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.slide-picture{
+  width: 100%;
+}
+

@@ -1,0 +1,20 @@
+.head-logo{
+  width: 236px;
+  max-width: 100%;
+}
+
+.component-wrapper{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 980px;
+  max-width: 100%;
+}
+
+:host {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
