@@ -9,13 +9,15 @@ import {CommonModule} from "@angular/common";
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import {IvyCarouselModule} from "angular-responsive-carousel";
+import { SingleProductCardComponent } from './single-product-card/single-product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrontPageComponent,
     NavbarComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    SingleProductCardComponent
   ],
   imports: [
     BrowserModule,

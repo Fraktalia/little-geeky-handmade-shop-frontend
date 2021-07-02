@@ -19,8 +19,8 @@ export class ProductService {
   }
 
   /** GET products from the server */
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productUrl)
+  getProducts(quantity?: number): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productUrl+"?quantity="+quantity)
       .pipe(
         catchError(this.handleError<Product[]>('getProducts', []))
       );

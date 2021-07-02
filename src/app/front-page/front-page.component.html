@@ -13,11 +13,11 @@
     [transitionDuration]="700"
     >
   </carousel>
-  <ul class = "products">
-    <li *ngFor="let product of products">
-      <p>
-        {{product.productName}}
-      </p>
-    </li>
-  </ul>
+  <h3>Nowości</h3>
+  <div class = "products">
+    <app-single-product-card
+      *ngFor="let iteratedProduct of products"
+      [product]="iteratedProduct">
+    </app-single-product-card>
+  </div>
 </div>

@@ -24,7 +24,7 @@ export class FrontPageComponent implements OnInit {
   }
 
   getProducts(): void{
-    this.productService.getProducts()
+    this.productService.getProducts(3)
       .subscribe(downloadedProducts => this.products = downloadedProducts);
   }
 

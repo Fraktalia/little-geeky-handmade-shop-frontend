@@ -1,0 +1,15 @@
+.component-wrapper{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+img{
+  width: 300px;
+  height: 300px;
+}
+
+p{
+  margin: 2px 0;
+}

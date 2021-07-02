@@ -11,3 +11,12 @@
 :host {
   width: 100%;
 }
+
+.products{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h3{
+  margin: 2.15em 0 0.4em 0;
+}
