@@ -1,12 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule, HostBinding } from '@angular/core';
 import {Product} from "../product";
 import {ProductService} from "../product.service";
+import {BrowserModule} from "@angular/platform-browser";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-front-page',
   templateUrl: './front-page.component.html',
   styleUrls: ['./front-page.component.css']
 })
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule
+  ],
+  declarations: [ ],
+  bootstrap: [ ]
+})
+
 export class FrontPageComponent implements OnInit {
   products: Product[] = [];
   images = [
