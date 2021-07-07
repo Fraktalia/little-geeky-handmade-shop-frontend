@@ -1,9 +1,10 @@
 <div class="component-wrapper"
      (mouseover)="hoverIn()" (mouseleave)="hoverOut()">
-  <button [@openClose]="isHover ? 'open' : 'closed'"
-    >Buy me!</button>
   <img src="assets/images/product_1.jpg">
   <p>{{product.productName}}</p>
   <p>---</p>
   <p>{{product.productPrice}}</p>
+  <button *ngIf="isHover" [@onHover]
+          class="buy-button"
+  >Buy me!</button>
 </div>

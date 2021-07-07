@@ -7,17 +7,15 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   templateUrl: './single-product-card.component.html',
   styleUrls: ['./single-product-card.component.css'],
   animations: [
-      trigger('openClose', [
-        state('open', style({
-          opacity: 1,
-        })),
-        state('closed', style({
-          opacity: 0,
-        })),
-        transition('open <=> closed', [
-          animate('0.3s')
-        ]),
+    trigger('onHover', [
+      transition(':enter', [
+        style({transform: 'translateY(100%)'}),
+        animate('300ms ease-in', style({transform: 'translateY(0%)'}))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({transform: 'translateY(100%)'}))
       ])
+    ])
   ]
 })
 
