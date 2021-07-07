@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import {IvyCarouselModule} from "angular-responsive-carousel";
 import { SingleProductCardComponent } from './single-product-card/single-product-card.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SingleProductCardComponent } from './single-product-card/single-product
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule,

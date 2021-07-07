@@ -17,15 +17,6 @@ import {
   styleUrls: ['./front-page.component.css']
 })
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
-  declarations: [ ],
-  bootstrap: [ ]
-})
-
 export class FrontPageComponent implements OnInit {
   products: Product[] = [];
   images = [
