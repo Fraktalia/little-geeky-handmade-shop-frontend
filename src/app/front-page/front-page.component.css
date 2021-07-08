@@ -40,4 +40,6 @@ button{
   height: 68%;
   display: flex;
   margin-top: 13%;
+  background-color: white;
+  border: none;
 }
