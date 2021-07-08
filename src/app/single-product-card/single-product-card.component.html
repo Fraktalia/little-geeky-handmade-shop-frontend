@@ -1,9 +1,10 @@
 <div class="component-wrapper"
      (mouseover)="hoverIn()" (mouseleave)="hoverOut()">
-  <button [@openClose]="isHover ? 'open' : 'closed'"
-    >Buy me!</button>
   <img src="assets/images/product_1.jpg">
-  <p>{{product.productName}}</p>
-  <p>---</p>
-  <p>{{product.productPrice}}</p>
+  <div [@openClose]="isHover ? 'open' : 'closed'"
+    class="info-product">
+    <p>{{product.productName}}</p>
+    <p>---</p>
+    <p>{{product.productPrice}}</p>
+  </div>
 </div>

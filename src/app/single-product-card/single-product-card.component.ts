@@ -9,10 +9,10 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   animations: [
       trigger('openClose', [
         state('open', style({
-          opacity: 1,
+          opacity: 0.5,
         })),
         state('closed', style({
-          opacity: 0,
+          opacity: 1,
         })),
         transition('open <=> closed', [
           animate('0.3s')
