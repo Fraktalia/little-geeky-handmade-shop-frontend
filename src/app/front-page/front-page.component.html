@@ -1,5 +1,4 @@
 <div class="component-wrapper">
-<!--  <img src="assets/images/picture_3.png" class="slide-picture">-->
   <carousel
     [images]="images"
     [objectFit]="'cover'"
@@ -13,6 +12,17 @@
     [transitionDuration]="700"
     >
   </carousel>
+  <div class="navigation-image">
+    <div class="navigation-image-1" style="background-image: url(/assets/images/picture_1.png); height: 200px; width: 300px; display: flex; justify-content: center;">
+      <button>Button-1</button>
+    </div>
+    <div class="navigation-image-2" style="background-image: url(/assets/images/picture_1.png); height: 200px; width: 300px; display: flex; justify-content: center;">
+      <button>button-2</button>
+    </div>
+    <div class="navigation-image-3" style="background-image: url(/assets/images/picture_1.png); height: 200px; width: 300px; display:flex; justify-content: center;">
+      <button>button-3</button>
+    </div>
+  </div>
   <h3>Nowości</h3>
   <div class = "products">
     <app-single-product-card
