@@ -21,6 +21,7 @@
     "angular-responsive-carousel": "^2.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
+    "typeface-muli": "^1.1.13",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
