@@ -8,21 +8,22 @@ import {LoginData} from "../loginData";
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
+
 export class LoginPageComponent implements OnInit {
-  login = new FormControl('');
-  password = new FormControl('');
+  email = new FormControl('')
+  password = new FormControl('')
   token: string | undefined
+  loginData: LoginData = {email: "", password: ""}
 
   constructor(
     private securityService: SecurityService,
-    private loginData: LoginData
   ) { }
 
   ngOnInit(): void {
   }
 
   public doLogin(): void{
-    this.loginData.login = this.login.value;
+    this.loginData.email = this.email.value;
     this.loginData.password = this.password.value;
     this.securityService.postLogin(this.loginData)
       .subscribe(token => this.token = token);

@@ -1,5 +1,5 @@
-<label for="login"> Login:</label>
-<input id="login" type="text" [formControl]="login">
+<label for="email"> Login:</label>
+<input id="email" type="text" [formControl]="email">
 
 <label for="password"> Password:</label>
 <input id="password" type="text" [formControl]="password">
@@ -7,4 +7,4 @@
 <button (click)="doLogin()">LET ME IN!</button>
 <button (click)="logToken()">Dej token ej</button>
 
-<p>Values: {{login.value}}</p>
+<p>Values: {{email.value}}</p>
