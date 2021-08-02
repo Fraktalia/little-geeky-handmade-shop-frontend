@@ -12,6 +12,8 @@ import {IvyCarouselModule} from "angular-responsive-carousel";
 import { SingleProductCardComponent } from './single-product-card/single-product-card.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SingleProductComponent } from './single-product/single-product.component';
+import { ReactiveFormsModule} from "@angular/forms";
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { SingleProductComponent } from './single-product/single-product.componen
     NavbarComponent,
     ContactPageComponent,
     SingleProductCardComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { SingleProductComponent } from './single-product/single-product.componen
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

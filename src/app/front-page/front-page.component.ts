@@ -2,7 +2,6 @@ import { Component, OnInit, NgModule, HostBinding } from '@angular/core';
 import {Product} from "../product";
 import {ProductService} from "../product.service";
 import {InstagramService} from "../instagram.service";
-import {Instagram} from "../instagram";
 
 @Component({
   selector: 'app-front-page',
