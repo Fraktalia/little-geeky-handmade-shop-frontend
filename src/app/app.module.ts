@@ -11,6 +11,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import {IvyCarouselModule} from "angular-responsive-carousel";
 import { SingleProductCardComponent } from './single-product-card/single-product-card.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { SingleProductComponent } from './single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FrontPageComponent,
     NavbarComponent,
     ContactPageComponent,
-    SingleProductCardComponent
+    SingleProductCardComponent,
+    SingleProductComponent
   ],
   imports: [
     BrowserModule,

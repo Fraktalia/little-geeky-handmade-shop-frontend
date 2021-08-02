@@ -1,15 +1,8 @@
 import { Component, OnInit, NgModule, HostBinding } from '@angular/core';
 import {Product} from "../product";
 import {ProductService} from "../product.service";
-import {BrowserModule} from "@angular/platform-browser";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import {InstagramService} from "../instagram.service";
+import {Instagram} from "../instagram";
 
 @Component({
   selector: 'app-front-page',
@@ -19,6 +12,7 @@ import {
 
 export class FrontPageComponent implements OnInit {
   products: Product[] = [];
+  instagramProfile: any;
   images = [
     {path: 'assets/images/picture_1.png'},
     {path: 'assets/images/picture_2.png'},
@@ -26,11 +20,14 @@ export class FrontPageComponent implements OnInit {
     {path: 'assets/images/picture_4.png'}
   ]
 
-  constructor(private productService:
-  ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private instagramService: InstagramService) { }
 
   ngOnInit() {
     this.getProducts();
+    this.getInstaPhotos();
+    console.log(this.instagramProfile);
   }
 
   getProducts(): void{
@@ -38,4 +35,9 @@ export class FrontPageComponent implements OnInit {
       .subscribe(downloadedProducts => this.products = downloadedProducts);
   }
 
+  private getInstaPhotos() {
+    this.instagramService.getInstagramProfile()
+      .subscribe(downloadedProfile => this.instagramProfile = downloadedProfile);
+    // TODO use instagramService to get data an log it in console
+  }
 }

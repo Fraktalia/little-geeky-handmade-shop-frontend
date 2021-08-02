@@ -26,6 +26,13 @@ export class ProductService {
       );
   }
 
+  getProductById(productId: number): Observable<Product> {
+    return this.http.get<Product>(this.productUrl+"/"+productId)
+      .pipe(
+        catchError(this.handleError<Product>('getProduct'))
+      );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
@@ -36,4 +43,5 @@ export class ProductService {
       return of(result as T);
     };
   }
+
 }
